@@ -28,6 +28,10 @@ module "networking" {
 
 module "database" {
   source = "./modules/database"
+
+  project = local.project
+  vpc     = module.networking.vpc
+  sg      = module.networking.sg
 }
 
 module "autoscaling" {

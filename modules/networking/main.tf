@@ -16,7 +16,7 @@ module "vpc" {
 }
 
 # SG rules
-...
+
 module "alb_sg" {
   source = "terraform-in-action/sg/aws"
   vpc_id = module.vpc.vpc_id
